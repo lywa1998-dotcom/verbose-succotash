@@ -20,10 +20,16 @@
     }
 
     header {
-      background: #A3D5E0;
-      color: #fff;
+      background: #A3D5E0; /* Soft Sky Blue */
+      color: #333;
       padding: 40px 20px;
       text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      width: 60px;
+      margin: 0 auto 15px auto;
     }
 
     header h1 {
@@ -39,15 +45,15 @@
       display: inline-block;
       margin-top: 20px;
       padding: 12px 25px;
-      background: #D97B66;
+      background: #D97B66; /* Warm Terracotta */
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 25px;
       transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background: #E3C565;
+      background: #E3C565; /* Mustard */
       color: #333;
     }
 
@@ -56,20 +62,30 @@
       text-align: center;
     }
 
+    #features {
+      background: #fff;
+    }
+
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      margin-top: 30px;
     }
 
     .feature {
-      background: #fff;
-      border-radius: 10px;
+      background: #B6D7A8; /* Light Green */
+      border-radius: 15px;
       padding: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       flex: 1 1 250px;
-      max-width: 300px;
+      max-width: 280px;
+      transition: transform 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
     }
 
     .feature h3 {
@@ -77,11 +93,13 @@
       margin-bottom: 10px;
     }
 
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+    #about {
+      background: #E3C565; /* Mustard */
+      color: #333;
+      border-radius: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 40px 20px;
     }
 
     form {
@@ -95,26 +113,43 @@
       margin: 10px 0;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
     }
 
     form button {
       padding: 12px;
-      background: #B6D7A8;
+      background: #B6D7A8; /* Green */
       border: none;
       color: #333;
       font-size: 1rem;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 25px;
     }
 
     form button:hover {
-      background: #E3C565;
+      background: #D97B66;
+      color: #fff;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Cat Outline Logo -->
+    <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#333" stroke-width="2">
+      <path d="M12 24c0-8 4-16 12-20l4 8 8-8 4 8c8 4 12 12 12 20v8c0 12-8 20-20 20S12 44 12 32v-8z"/>
+      <circle cx="24" cy="28" r="2"/>
+      <circle cx="40" cy="28" r="2"/>
+      <path d="M24 40c4 2 12 2 16 0"/>
+    </svg>
+
     <h1>Roavax</h1>
     <p>The Natural English Method</p>
     <a href="#contact" class="btn">Join Now</a>
